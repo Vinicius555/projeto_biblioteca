@@ -32,6 +32,7 @@ def deleteClientes(id):
     try:
        id = input("ID:")
        curso.execute(f"DELETE FROM clientes WHERE id={id}")
+       banco.commit()
     except error as ex:
         print(ex)
     finally:
